@@ -875,7 +875,7 @@ db.query(query, values, (err, result) => {
 
   // Move the uploaded image to a folder on your server
   const sourcePath = uploadedImages.path;
-  const targetPath = `D:/next/renthunter/public/images/${uploadedImages.filename}`;
+  const targetPath = `D:/next/renthunter/Renthunter-Aman/public/images/${uploadedImages.filename}`;
   fs.rename(sourcePath, targetPath, (err) => {
     if (err) {
       console.error('Error moving the uploaded file:', err);

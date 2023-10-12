@@ -104,19 +104,6 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
 
   async function handleSubmitFormData() {
     try {
-<<<<<<< HEAD
-      // Send the form data to storeFormDataWithImage API
-      const response = await fetch('http://localhost:5000/api/storeFormDataWithImage', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-  
-      if (response.status === 200) {
-        // Data stored successfully
-=======
       const formDataToSend = new FormData();
 
       
@@ -138,7 +125,6 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
       });
   
       if (response.status === 200) {
->>>>>>> origin/main
         Router.push('/user/userhome');
       } else {
         console.error('Data storage failed:', await response.text());
@@ -149,11 +135,7 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
       // Handle the error or display an error message to the user
     }
   }
-<<<<<<< HEAD
-  useEffect(() => {
-=======
           useEffect(() => {
->>>>>>> origin/main
     console.log(formData);
   }, [formData]);
 

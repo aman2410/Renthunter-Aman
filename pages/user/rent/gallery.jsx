@@ -9,7 +9,6 @@ const Gallery = ({
   formData,
 }) => {
   const [previewImages, setPreviewImages] = useState([]);
-
   // Function to handle file input change and append selected images to uploadedImages array
   const handleFileUpload = (event) => {
     const selectedFiles = event.target.files; // Get selected files
@@ -46,11 +45,9 @@ const Gallery = ({
               type="file"
               encType="multipart/form-data"
               id="uploadimages"
-<<<<<<< HEAD
-              name="file"
-=======
+
               name="uploadedImages"
->>>>>>> origin/main
+
               accept="image/*"
               multiple
               onChange={handleFileUpload}
