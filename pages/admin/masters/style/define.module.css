@@ -1,0 +1,168 @@
+/* DefineScratchCards.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column; /* Display containers in one column */
+    gap: 20px;
+    padding: 5%;
+}
+.cardContainer {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow containers to expand and take equal space */
+    display:flow-root;
+    margin-top: 60px;
+
+    }
+.cardContainer h1{
+    font-size: 15px;
+    font-weight: 600;
+
+    }
+.inputContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    margin-bottom: 20px;
+    
+}
+.inputContainer input{
+border:none;
+border-bottom: 1px solid #000000;
+
+    
+}
+.inputContainer select{
+border:none;
+border-bottom: 1px solid #000000;
+width: 150%;
+
+    
+}
+.memdetails {
+    margin-bottom: 10px;
+    
+    }
+.memdetails input{
+border:none;
+border-bottom: 1px solid #000000;
+
+}
+.memdetails label{
+
+    display: block;
+    padding-bottom: 10px;
+    
+    }
+
+.memdetails select{
+
+    width:100%;
+    border:none;
+    border-bottom: 1px solid #000000;
+
+    }
+.inputtype {
+    display: block;
+    
+}
+
+.inputtype label{
+    width: 100%;
+    min-width: 150px;
+    display: block;
+    padding:10px;
+    padding-left:0;
+    
+}
+.inputtype input{
+    width: 50%;
+    min-width: 150px;
+    border: none; /* Remove the default border */
+    border-bottom: 1px solid #ccc;
+     /* Add a bottom border for the line effect */
+}
+.inputtype select{
+    width: 50%;
+    min-width: 150px;
+    border: none; /* Remove the default border */
+    border-bottom: 1px solid #ccc;
+     /* Add a bottom border for the line effect */
+}
+.checkboxcontainer{
+    width:auto;
+    display:flex;
+    align-items:center;
+}
+.checkboxcontainer label{
+    width:fit-content;
+    font-size: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.button{
+    background-color: orange;
+    color: #ffffff;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+}
+
+.checkboxcontainer{
+    width:auto;
+    display:flex;
+    align-items:center;
+}
+
+.carddetails{
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    
+    }
+
+.carddetails h1{
+    display: block;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+        }
+.showsearch{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 2.5%;
+}
+.showsearch label{
+    display: block;
+}
+.showsearch input{
+    border: none; /* Remove the default border */
+    border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
+}
+.table_container{
+    display: flex;
+    
+}
+.table_container table{
+    display: inline-flex;
+}
+.table_container th{
+    background-color: black;
+    color: #ffffff;
+    justify-content: center;
+    row-gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    
+
+}
+.table_container td{
+
+    display: block;
+}

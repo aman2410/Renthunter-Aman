@@ -1,0 +1,214 @@
+/* DefineScratchCards.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column; /* Display containers in one column */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .cardContainer {
+    background-color: #ffffff;
+    padding: 20px;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow containers to expand and take equal space */
+    display:flow-root;
+    margin-top: 80px;
+    
+  }
+  .cardContainer h1 {
+    margin: 0;
+    
+  }
+  .cardContainer button {
+    background-color: orange !important;
+    color: #ffffff;
+    padding: 10px 20px 10px 20px !important;
+    border: none;
+    flex: 1; /* Allow containers to expand and take equal space */
+    display:flow-root;
+    
+  }
+  .addContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+  }
+  .inputContainer {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    align-items: center;
+}
+  .inputContainer input{
+    border: none; /* Remove the default border */
+    border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
+    height: 20px;
+  }
+  .inputContainer select{
+    border: none; /* Remove the default border */
+    border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
+    height: 30px;
+    width:200px;
+  }
+  .inputContainer label{
+     /* Add a bottom border for the line effect */
+    height: 20px;
+    display: block;    
+  }
+  
+  .inputRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  /* Align the right input container to the right */
+  .inputContainerRight {
+    
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    
+   
+  }
+
+#label_show{
+  display: block;
+}
+
+
+
+   .inputContainerRight1{
+    
+    margin-left: 10px;
+    /* display: flex; */
+    /* flex-direction: column;
+   justify-content: center; */
+    
+   
+  }
+  .inputContainerRight input{
+    width: 100%;
+    border: none ;
+    border-bottom:1px solid #010101;
+  }
+  .inputContainerRight label{
+    width: 30%;
+    
+  }
+  .carddetails{
+    background-color: #ffffff;
+    padding: 20px;
+    
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow containers to expand and take equal space */
+    flex-direction: row;
+   
+  }
+  
+  
+  /* Style the dropdown and select elements */
+  .select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    border-radius: 0;
+    appearance: none; /* Remove default arrow in Chrome */
+  }
+  
+
+
+
+  .uploadContainer {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    gap: 20px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .choosefile{
+    border: 1px solid black;
+    width: 100%;
+  }
+  .choosearea{
+    display: flex;
+    left: 0;
+    flex-direction: column;
+    
+    
+
+  }
+  .getfile{
+    width: 50%;
+  }
+  .getfile button{
+    width: 40%;
+  }
+  .choosearea label{
+    width: 50%;
+     }
+     .get {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 30px;
+
+       }  
+          .get h1{
+        width: 50%;
+        font-size: 10px;
+         }     
+         
+         .get button{
+          width: 50%;
+           }
+  
+
+  
+  .uploadContainer input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .uploadContainer button {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .uploadContainer button:not(:last-child) {
+    margin-right: 10px;
+  }
+  /* Style the table */
+  .table {
+    width: 100%;
+    border: 1px solid #010101;
+    margin-top: 20px;
+    border-color: black;
+    
+  }
+  
+  .th,
+ .td {
+    padding: 10px;
+    border: 1px solid #010101;
+    text-align: left;
+  }
+  
+  .th {
+    background-color: #f0f0f0;
+  }
+  

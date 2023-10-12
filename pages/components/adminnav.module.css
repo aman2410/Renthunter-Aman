@@ -1,0 +1,321 @@
+.Navbar{
+
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 20px;
+  height: 60px;
+  padding: 0 2%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.Navbar img{
+  float: left;
+  width: 160px;
+  flex-shrink: no shrink;
+  display: flex;
+  align-items: center;
+  transition: all ease .3s;
+ 
+}
+.Navbar img:hover {
+  transform: scale(1.1); /* Adjust the scale value to your preference */
+}
+
+
+
+.Navbar .links {
+  float: right;
+  padding: 0;
+  font-size: .5rem;
+  margin-right: 0px;
+  display: flex; /* Remove display: none; */
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+}
+
+.Navbar .mobileMenu {
+  background-color: white; 
+  opacity: 1;
+}
+
+
+.Navbar .links li{
+
+  list-style: none;
+}
+
+
+.Navbar .links a{
+
+  display: inline-block;
+  padding: 8px;
+  font-weight: 650px;
+  color: black;
+  text-decoration: none;
+  font-size: .78rem;
+  transition: all ease .3s;
+  margin-right: 29px;
+  width: max-content;
+
+}
+
+#Home{
+  font-size: .90rem !important;
+}
+
+.Navbar .links a:hover {
+  color: rgb(12, 123, 226); /* Change to the desired hover color */
+}
+
+
+.Navbar .line{
+
+  color: rgb(255, 128, 0);
+}
+
+.nav_toggle{
+  position: absolute;
+  display: none;
+}
+
+
+.Navbar .icon_burger{
+
+  display: none;
+  position: absolute;
+  right: 3.7%;
+  top: 50%;
+  transform: translateY(-38%);
+  display: none;
+  cursor: pointer;
+}
+
+.Navbar .icon_burger .line{
+  width: 27px;
+  height: 4px;
+  background-color: rgb(228, 151, 42);
+  margin: 5px;
+  border-radius: 3px;
+  /* transform: translateY(5px); */
+  transition: all .3s ease-in-out;
+}
+
+
+
+
+
+/* Media Quaries */
+
+
+
+
+@media (max-width:768px){
+
+.Navbar input[type="checkbox"].nav_toggle:checked ~ .links.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: fixed;
+  z-index: 9;
+  top: 80px;
+  right: 0;
+  width: 33%;
+  height: 60%; 
+  max-height: 25%;
+  padding-top: 25px;
+  margin-top: 0.4px;
+  transition: transform ease .3s, 0.3s; /* Add opacity transition */
+  opacity: .9;/* Set initial opacity to 0 for fade-in effect */
+  /* Add box shadow */
+  overflow-y: scroll;
+  
+  
+}
+
+
+.Navbar .icon_burger{
+  display: block;
+}
+
+.Navbar img{
+
+  float: none;
+  flex-shrink: 0;
+}
+
+
+  
+.links {
+  display: none;
+  display: flex;
+  flex-direction: column; /* Display links in a column */
+  align-items: center; /* Center align links vertically */
+  margin-top: 20px; /* Adjust the top margin as needed */
+  
+  
+}
+
+
+
+.Navbar :checked ~ .links {
+  bottom: 0;
+}
+
+.Navbar .links a {
+  display: block;
+  padding: 5px;
+  font-weight: 610px;
+  color: black;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: all ease .3s;
+  margin-left: 62px;
+}
+
+#Home{
+  margin-left: 76px;
+  font-size: .966rem;
+}
+
+.links.mobileMenu {
+  
+  max-height: 80px; /* Adjust the max-height as needed */
+}
+
+
+
+.Navbar :checked ~ .icon_burger .line:nth-child(1){
+    
+    transform: translateY(11px) rotate(225deg);
+
+}
+
+
+
+.Navbar :checked ~ .icon_burger .line:nth-child(3){
+    
+    transform: translateY(-7px) rotate(-225deg);
+
+}
+.Navbar :checked ~ .icon_burger .line:nth-child(2){
+    
+    opacity: 0;
+
+}
+
+
+.Navbar .links a:hover {
+color: rgb(12, 123, 226); /* Change to the desired hover color */
+}
+
+}
+
+
+@media (max-width: 768px) {
+  .Navbar .links.mobileMenu {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .Navbar .links.mobileMenu {
+    display: flex !important;
+  }
+}
+
+
+
+
+@media (max-width:622px){
+
+
+
+  .Navbar input[type="checkbox"].nav_toggle:checked ~ .links.mobileMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    /* position: fixed; */
+    z-index: 9;
+    right: 0;
+    margin-top: 120px;
+    width: 44%;
+    height: auto;
+    padding-top: 25px;
+    /* transform: translateX(30px); */
+    margin-top: 0.4px;
+    transition: transform ease .3s, 0.3s; /* Add opacity transition */
+    opacity: .9;/* Set initial opacity to 0 for fade-in effect */
+    /* Add box shadow */
+  }
+  
+
+.links a{
+
+  display: flex;
+  padding: 5px;
+  font-weight: 610px;
+  color: black;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: all ease .3s;
+  margin-left: 10px;
+
+}
+
+  .links.mobileMenu {
+  /* height: auto; */
+  overflow-y: auto;
+  max-height: 80px; /* Adjust the max-height as needed */
+  
+  
+}
+
+
+}
+
+@media (max-width:513px){
+
+
+  .Navbar input[type="checkbox"].nav_toggle:checked ~ .links.mobileMenu{
+    width: 49%;
+  }
+
+}
+@media (max-width:410px){
+
+
+  .Navbar input[type="checkbox"].nav_toggle:checked ~ .links.mobileMenu{
+    width: 58%;
+    
+  }
+
+}
+@media (max-width:388px){
+
+
+  .Navbar input[type="checkbox"].nav_toggle:checked ~ .links.mobileMenu{
+    width: 58%;
+    
+  }
+
+}
+
+@media (max-width:331px){
+
+
+  .Navbar input[type="checkbox"].nav_toggle:checked ~ .links.mobileMenu{
+    width: 68%;
+  }
+
+}
+
+

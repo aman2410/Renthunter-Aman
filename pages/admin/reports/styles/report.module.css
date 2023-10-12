@@ -1,0 +1,107 @@
+/* DefineScratchCards.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column; /* Display containers in one column */
+  gap: 20px;
+  padding: 5%;
+}
+.cardContainer {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Allow containers to expand and take equal space */
+  display:flow-root;
+  margin-top: 80px;
+
+  }
+.cardContainer h1{
+  font-size: 12px;
+  font-weight: 500;
+
+  }
+
+  .cardContainer button{
+    background-color: orange;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    }
+
+.inputtype {
+  display: block;
+  
+}
+
+.inputtype label{
+  width: 100%;
+  min-width: 150px;
+  display: block;
+  padding:10px;
+  padding-left:0;
+  
+}
+.inputtype input{
+  width: 50%;
+  min-width: 150px;
+  border: none; /* Remove the default border */
+  border-bottom: 1px solid #ccc;
+   /* Add a bottom border for the line effect */
+}
+.carddetails{
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+  
+  }
+
+.carddetails h1{
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+      }
+.showsearch{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 2.5%;
+}
+.showsearch label{
+  display: block;
+}
+.showsearch input{
+  border: none; /* Remove the default border */
+  border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
+}
+.table_container{
+  display: flex;
+  
+}
+.table_container table{
+  display: inline-flex;
+}
+.table_container th{
+  background-color: black;
+  color: #ffffff;
+  justify-content: center;
+  row-gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: fit-content;
+  
+
+}
+.table_container td{
+
+  display: block;
+}
+
+
+
+
+
+

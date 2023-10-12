@@ -1,0 +1,113 @@
+/* DefineScratchCards.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column; /* Display containers in one column */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+
+.addContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    
+
+}
+  .cardContainer {
+    background-color: #ffffff;
+    padding: 20px;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow containers to expand and take equal space */
+    display:flow-root;
+    margin-top: 80px;
+    
+  }
+  .cardContainer h1 {
+    font-size: 20px;
+    font-weight: 500;
+    
+  }
+  .cardContainer  button{
+    background-color: orange;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+
+    
+  }
+.inputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 10px;
+    align-items: center;
+
+}
+.inputContainer input{
+  border: none; /* Remove the default border */
+  border-bottom: 1px solid #ccc;
+  font-size: 25px;
+  
+}
+.inputContainer label{
+  display: block;
+  width: 50%;
+  font-size: 10px;
+
+}
+.inputContainer select{
+  border: none; /* Remove the default border */
+  border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
+  height: 30px;
+  width:200px;
+}
+.inputContainer ::placeholder{
+  font-size: 15px;
+}
+.choosearea{
+  border: solid 1px black;
+  display: flex;
+  height: fit-content;
+}
+ 
+.carddetails{
+    background-color: #ffffff;
+    padding: 20px;
+    
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow containers to expand and take equal space */
+    flex-direction: row;
+   
+  }
+  /* Style the dropdown and select elements */
+.select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    border-radius: 0;
+    appearance: none; /* Remove default arrow in Chrome */
+}
+  
+
+  /* Style the table */
+.table {
+    width: 100%;
+    border: 1px solid #010101;
+    margin-top: 20px;
+    border-color: black;
+    display: flex;
+    
+}
+.th, .td {
+    padding: 10px;
+    border: 1px solid #010101;
+    text-align: left;
+}
+.th {
+    background-color: #f0f0f0;
+}

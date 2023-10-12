@@ -1,0 +1,128 @@
+/* dropdown.module.css */
+
+/* Dropdown container is inline-block to keep button and dropdown together */
+.dropdown {
+    position: relative;
+    /* display: inline-block; */
+  }
+  
+  /* Set the position of the button and prevent it from moving */
+  .dropdown-button {
+    background-color: transparent !important;
+    cursor: pointer;
+    border: transparent 0;
+    padding: 7px 10px 7px 10px;
+    margin-left: 18px ;
+    font-size:  .9rem ;
+    font-family: 'poppins', sans-serif;
+    position: relative;
+    width: max-content;
+    margin-right: 20px;
+    z-index: 2; /* Place the button above other elements */
+  }
+  
+  
+  .dropdown-button:hover{
+    color: rgb(12, 123, 226);
+    transition: all ease .3s;
+  }
+  
+  
+  /* Styles for the dropdown content container */
+  .dropdown-content {
+    position: absolute; /* Position dropdown absolutely */
+    top: calc(100% - 18px); /* Place dropdown below the button with some spacing */
+    left: -50px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 3; /* Set dropdown above the button */
+    width: 133%; /* Expand dropdown to full width */
+    max-height: 100px; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 10px;
+    margin-top: 24.4px;
+    /* margin-right: 50px; */
+    scrollbar-width: 1px;
+    scrollbar-color: #888 #eee;
+    margin-right: 50px;
+    
+  
+  
+  }
+  
+  
+  .dropdown-content {
+    /* ... other styles ... */
+  
+    /* Webkit-based browsers (Chrome, Brave) */
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #888 #eee; /* Thumb and track colors */
+  
+  }
+  
+  /* Styles for the scrollbar thumb in Webkit-based browsers */
+  .dropdown-content::-webkit-scrollbar-thumb {
+    background-color: #af4949; /* Change the color of the thumb */
+  }
+  
+  /* Styles for the scrollbar track in Webkit-based browsers */
+  .dropdown-content::-webkit-scrollbar-track {
+    background-color: #eee; /* Change the color of the track */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Styles for the dropdown list container */
+  .dropdown-list-container {
+    position: relative; /* Positioned relative to the dropdown-content */
+    width: fit-content; /* Expand to full width */
+    margin-right: 22px;
+  }
+  
+  /* Styles for the dropdown list */
+  .dropdown-list {
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    flex-direction: column;
+    gap: 0;
+    font-size: .7rem;
+    margin-left: 60px;
+  }
+  
+  /* Styles for individual list items */
+  .dropdown-list li {
+    padding: 0px;
+    width: 35%; /* Set list items to full width */
+  }
+  
+  /* Styles for links within list items */
+  .dropdown-list li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    gap: 10px;
+    width: max-content;
+    padding-bottom: 10px;
+  }
+  
+  
+  #reports{
+  
+    margin-right: 10px;
+    width: fit-content;
+  }
+  
+  
+  
+  
+/*   
+  This is the code for Postproperties.module.css */

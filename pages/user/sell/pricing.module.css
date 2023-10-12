@@ -1,0 +1,131 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 130px;
+    margin-left: 2.5%;
+    background-color: #ffffff;
+    padding-top: 10px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: fit-content;
+}
+.maincontainer h1{
+    font-size: 15px;
+    display: flex;
+    margin: 0;
+    
+    z-index:1;
+    
+}
+.maincontainer{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    width: 90%;
+}
+.cc1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cc1 label{
+    display: block;
+    margin-bottom: 20px;
+}
+.cc1 input{
+    width:24vw;
+    min-width: 150px;
+    padding-bottom: 30px;
+    border: none; /* Remove the default border */
+  border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
+}
+.cc1 input::placeholder{
+    
+    font-size: 15px;
+
+}
+.cc1 select{
+    width:14vw;
+    min-width: 150px;
+    height: 30px;
+    margin: 0;
+    border: none; /* Remove the default border */
+  border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
+}
+
+.cc3{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cc3 label{
+    display: block;
+    margin-bottom: 20px;
+}
+.cc3 input{
+    width:24vw;
+    min-width: 150px;
+    padding-bottom: 30px;
+    border: none; /* Remove the default border */
+  border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
+}
+.cc3 input::placeholder{
+    
+    font-size: 15px;
+
+}
+
+
+.cc4 input{
+    display: flex;
+    width: 95%;
+    height: 100px;
+}
+.cc2{
+    display: flex;
+    flex-direction: column;
+}
+.cc2 h1{
+    display: block;
+}
+.cc2 input{
+    width:20px;
+    
+    margin: 0;
+}
+.radiobutton{
+    display:flex;
+    flex-direction: row;
+}
+.radiobutton label{
+    width: 100px;
+    
+}
+.radiobutton input{
+    width: 50px;
+    min-width: 20px;
+    
+}
+.button{
+    display: flex;
+    gap: 10px;
+    
+  }
+  
+  .previousbutton{
+    background-color: orange;
+    padding: 10px;
+    color: white;
+    width: 150px;
+    border: none;
+  }
+  .nextbutton{
+    background-color: orangered;
+    padding: 10px;
+    color: white;
+    width: 150px;
+    border: none;
+  }

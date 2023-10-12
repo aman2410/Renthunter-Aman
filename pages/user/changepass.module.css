@@ -1,0 +1,129 @@
+.changecontainer{
+  width:80%;
+  height:40%;
+  display: flex; 
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0 40px 40px 40px;
+  margin-top: 90px;
+  margin-left:5%;
+  margin-right:5%;
+  flex-direction: column;
+  box-shadow: 0px 5px 15px rgba(57, 55, 55, 0.2);
+  }
+  .changecontainer h1{
+    width:100%;
+    display: flex;
+    font-size: 15px !important;
+    font-weight: 800;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 29px;
+    
+  
+    }
+  .inputchangecontainer{
+    width:100%;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px;
+  }
+  
+  .inputchangecontainer label{
+    width:90%;
+  display: flex;
+  }
+  
+  .inputchangecontainer input{
+    padding: 5px;
+    border: none; /* Remove the default border */
+    border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
+    background: none; /* Optional: remove the background */
+    /* transition: border-color 0.3s; */
+    width: 100%;
+  
+  
+  }
+  
+  .inputchangecontainer button{
+    background-color: orange !important;
+    color: white !important;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    width: 30%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Media Quries */
+  
+  
+  @media(max-width:595px){
+  
+    .changecontainer{
+  
+      width: 75%;
+      transform: translateX(13px);
+  
+    }
+  
+    .inputchangecontainer button{
+      width: max-content;
+    }
+  
+  
+  }
+  
+  
+  @media(max-width:495px){
+  
+  
+  
+    .changecontainer{
+  
+      width: 70%;
+    }
+    
+  }
+  
+  
+  @media(max-width:400px){
+  
+  
+  
+    .changecontainer{
+  
+      width: 64%;
+  
+    }
+  
+    .inputchangecontainer button{
+  
+      font-size: .7rem;
+    }
+  
+    .inputchangecontainer label{
+  
+      font-size: .85rem;
+    }
+  
+    .changecontainer h1{
+  
+      transform: translateX(-2px);
+      margin-bottom: 20px;
+    }
+  
+    .changecontainer{
+  
+      transform: translateX(8px);
+    }
+    
+  }
+  
+  
+  /* This is the updated code for changepass.module.css   which is under user */

@@ -1,0 +1,27 @@
+.sidenavbar{
+    width: 20%;
+    text-decoration: none;
+    list-style: none;
+    box-shadow: 0px 5px 15px rgba(57, 55, 55, 0.2);;
+    margin: 10px;
+    margin-top: 100px;
+
+}
+.container ul{
+    
+    
+    list-style: none;
+    margin-left: 1px !important;
+    padding: 10px;
+
+}
+.container ul li{
+    margin: 10px;
+    font-size: 12px;
+
+}
+.container a{
+text-decoration: none;
+color: black;
+
+}

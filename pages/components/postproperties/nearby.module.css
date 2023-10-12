@@ -1,0 +1,36 @@
+.checkboxcontainer{
+    width:50%;
+    margin: 10px;
+
+}
+.checkboxcontainer h1{
+    font-size: 12px;
+    
+}
+
+.ic1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    align-items: center;
+}
+.ic1 label{
+    margin-right: 10px;
+    display: flex;
+    width: fit-content;
+    font-size: 12px;
+}
+.ic1 input{
+    margin-right: 10px;
+    display: flex;
+    width: fit-content;
+    margin: 0;
+}
+.ic2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,136 @@
+/* DefineScratchCards.module.css */
+
+/* Increase the minimum width of the select element for "Select Property Type" */
+#selectProperties {
+  min-width: 200px; /* You can adjust the width as needed */
+  width: auto; /* Set width to auto to accommodate long option text */
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  border-radius: 0;
+  appearance: none; /* Remove default arrow in Chrome */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cardContainer {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 75px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.cardContainer h1 {
+  margin: 10px;
+}
+
+.inputContainer label,
+.inputContainer input {
+  margin: 10px;
+  padding: 10px;
+  width: 40vh
+}
+
+.inputContainer select {
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+.cardContainer button {
+  background-color: orange !important;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px !important;
+  border: none;
+  flex: 1;
+  display: flow-root;
+}
+
+.inputContainer input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.inputContainer select {
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.inputRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  align-content: center;
+}
+
+.inputContainerRight {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  position: relative;
+  width: 50%;
+}
+
+.inputContainerRight label {
+  width: 50%;
+  right: 0;
+  position: relative;
+}
+
+.inputContainerRight input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 50%;
+  right: 0;
+}
+
+.carddetails {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  flex-direction: row;
+}
+
+.select {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  border-radius: 0;
+  appearance: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-color: black;
+}
+
+.th,
+.td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.th {
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "renthunter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19",
+    "flatpickr": "^4.6.13",
+    "next": "^13.5.4",
+    "npx": "^10.2.2",
+    "react": "18.2.0",
+    "react-calendar": "^4.6.0",
+    "react-datepicker": "^4.16.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-scroll": "^1.8.9",
+    "uuid": "^9.0.1"
+  }
+}
