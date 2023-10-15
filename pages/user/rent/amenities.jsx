@@ -32,6 +32,7 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
     const handleCheckboxChange = (e) => {
       const checkboxId = e.target.id;
       const isChecked = e.target.checked;
+
   
       // Get the current nearby value from formData or initialize it as an empty string
       const currentAmenities = formData?.amenities || '';
@@ -50,9 +51,9 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
         const amenitiesArray = currentAmenities.split(',').filter(item => item.trim() !== '');
         const index = amenitiesArray.indexOf(checkboxId);
         if (index !== -1) {
-          nearbyArray.splice(index, 1);
+          amenitiesArray.splice(index, 1);
         }
-        updatedAmenities = nearbyArray.join(',');
+        updatedAmenities = amenitiesArray.join(',');
       }
   
       // Update the formData with the new nearby string
@@ -131,9 +132,6 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
       // Fetch data from the server when the component mounts
       fetchData1();
     }, []);
-
-
-
   return (
     <>
 
@@ -191,8 +189,11 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
                     id={item.id}
                     name='amenities'
                     value={item.id}
-                    checked={amenities?.includes(item.id) ?? false}
-                    onChange={handleCheckboxChange}
+                    checked={selectedAmenities.includes(item.id) || (amenities?.includes(item.id) ?? false)}
+                    onChange={(e) => {
+                      handleChangeInput(e);
+                      handleCheckboxChange(e);
+                    }}
                   />
                   {item.atype}
                 </label>

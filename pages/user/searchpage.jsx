@@ -6,6 +6,17 @@ import PostProperty from "../components/POSTPROPERTY";
 import Link from "next/link";
 const SearchPage = () => {
   const [propertyData, setPropertyData] = useState([]);
+  const [withPhotosOnly, setWithPhotosOnly] = useState(false); // State to track the checkbox
+  const [filters, setFilters] = useState({
+    withPhotos: false,
+    owner: false,
+    broker: false,
+    builder: false,
+      fulfur: false,
+  sem: false,
+  unfur: false,
+    // Add more filters as needed
+  });
 
   useEffect(() => {
     // Fetch property data from your server when the component mounts
@@ -16,6 +27,43 @@ const SearchPage = () => {
       .catch(error => console.error('Error fetching property data:', error));
 
   }, []);
+
+// Filter the property data based on the selected filters
+const filteredPropertyData = propertyData.filter(property => {
+  console.log("Checking property:", property);
+  if (withPhotosOnly && !property.img1) {
+    return false;
+  }
+  if (filters.owner && property.kyc_utype !== "Owner") {
+    return false;
+  }
+  if (filters.broker && property.kyc_utype !== "Broker") {
+    return false;
+  }
+  if (filters.builder && property.kyc_utype !== "Builder") {
+    return false;
+  }
+
+  if (filters.sem && property.ftype !== "Semi furnished") {
+    return false;
+  }
+  if (filters.fulfur && property.ftype !== "Fully furnished") {
+    return false;
+  }
+  if (filters.unfur && property.ftype !== "Unfurnished") {
+    return false;
+  }
+  // Add more filter conditions as needed
+  return true; // If none of the conditions match, include the property
+});
+
+
+const handleCheckboxChange = () => {
+  setWithPhotosOnly(!withPhotosOnly);
+};
+
+
+
   return (
     <>
       <div>
@@ -29,20 +77,42 @@ const SearchPage = () => {
 
             <h1>Filter</h1>
         <div className={styles.ic2}>
-                <input type="checkbox" />
+        <input
+                type="checkbox"
+                checked={withPhotosOnly}
+                onChange={handleCheckboxChange}
+              />
                 <label>Show Only With Photos</label>
                 </div>
                 <h2>Posted By</h2>
                 <div className={styles.ic2}>
-                <input type="checkbox"  />
+                <input
+              type="checkbox"
+              checked={filters.owner}
+              onChange={() =>
+                setFilters({ ...filters, owner: !filters.owner })
+              }
+            />
                 <label>Owner</label>
                 </div>
                 <div className={styles.ic2}>
-                <input type="checkbox"   />
+                <input
+              type="checkbox"
+              checked={filters.broker}
+              onChange={() =>
+                setFilters({ ...filters, broker: !filters.broker })
+              }
+            />
                 <label>Broker</label>
                 </div>
                 <div className={styles.ic2}>
-                <input type="checkbox"   />
+                <input
+              type="checkbox"
+              checked={filters.builder}
+              onChange={() =>
+                setFilters({ ...filters, builder: !filters.builder })
+              }
+            />
                 <label>Builder</label>
                 </div>
 
@@ -66,15 +136,33 @@ const SearchPage = () => {
 
                 <h2>Furnished</h2>
                 <div className={styles.ic2}>
-                <input type="checkbox"  />
+                <input
+              type="checkbox"
+              checked={filters.fulfur}
+              onChange={() =>
+                setFilters({ ...filters, fulfur: !filters.fulfur })
+              }
+            />
                 <label>Furnished</label>
                 </div>
                 <div className={styles.ic2}>
-                <input type="checkbox"   />
+                <input
+              type="checkbox"
+              checked={filters.sem}
+              onChange={() =>
+                setFilters({ ...filters, sem: !filters.sem })
+              }
+            />
                 <label>Semi-Furnished</label>
                 </div>
                 <div className={styles.ic2}>
-                <input type="checkbox"   />
+                <input
+              type="checkbox"
+              checked={filters.unfur}
+              onChange={() =>
+                setFilters({ ...filters, unfur: !filters.unfur })
+              }
+            />
                 <label>Unfurnished</label>
                 </div>
 
@@ -113,9 +201,9 @@ const SearchPage = () => {
         </div>
         </div>
         <div className={styles.propertyList}>
-        {propertyData.map(property => (
-          <div key={property.id} className={styles.propertyRow}>
-            <h2>{property.id}</h2>
+        {filteredPropertyData.map(property => (
+          <div key={property.post_home_id} className={styles.propertyRow}>
+            <h2>{property.post_home_id}</h2>
 <h2>{property.name_num}</h2>
 <h2>{property.street}</h2>
 <h2>{property.country}</h2>
@@ -132,7 +220,7 @@ const SearchPage = () => {
 <h2>{property.area_build_type}</h2>
 <h2>{property.area_build_in}</h2>
 <h2>{property.adate}</h2>
-<h2>{property.fur}</h2>
+<h2>{property.ftype}</h2>
 <h2>{property.floor}</h2>
 <h2>{property.facings}</h2>
 <h2>{property.other_details_2}</h2>

@@ -897,7 +897,17 @@ res.status(500).json({ error: 'Internal server error' });
 
 //  Define a route to fetch data from PostHome table
 app.get('/api/propertyData', (req, res) => {
-  const query = 'SELECT * FROM post_home';
+  const query = `
+SELECT 
+    p.id AS post_home_id, -- Alias the id from post_home
+    f.id AS furnished_id, -- Alias the id from furnished_types
+    p.*, 
+    f.*
+FROM 
+    post_home p
+LEFT JOIN 
+    furnished_types f ON p.fur = f.id
+  `;
   db.query(query, (err, results) => {
     if (err) {
       console.error('Database query error:', err);
