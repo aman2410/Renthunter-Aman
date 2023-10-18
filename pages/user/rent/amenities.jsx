@@ -23,8 +23,8 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
   const [selectedServices, setSelectedServices] = useState(
     (formData.services && formData.services.split(',')) || []
   );
-  const [otherDetails, setOtherDetails] = useState(
-    localStorage.getItem('otherDetails') || ''
+  const [otherDetails2, setOtherDetails] = useState(
+    localStorage.getItem('otherDetails2') || ''
   );
 
 
@@ -236,8 +236,9 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
               <input
                 type="text"
                 placeholder="Specify Other Details (If Any)"
-                value={otherDetails}
+                value={formData.otherDetails2}
                 onChange={handleChangeInput}
+                name='otherDetails2'
               />
               {/* <h1>150 Character Remaining</h1> */}
             </div>

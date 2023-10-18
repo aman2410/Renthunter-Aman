@@ -109,7 +109,8 @@ const Pricing = ({formData, handleChangeInput, handleNextStep,handlePrevStep, te
             <input
               type="text"
               placeholder="Specify Other Details (If Any)"
-              value={formData.otherDetails}
+              name="otherDetails3"
+              value={formData.otherDetails3}
               onChange={(e) => handleChangeInput(e)}
             />
             {/* <h1>150 Character Remaining</h1> */}

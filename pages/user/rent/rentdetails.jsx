@@ -300,6 +300,7 @@ const Rentdetails = ({
               placeholder="Specify Other Details (If Any)"
               id="otherDetails"
               name="otherDetails"
+              
               onChange={(e) => handleChangeInput(e)}
             />
             {/* <h1>150 Character Remaining</h1> */}

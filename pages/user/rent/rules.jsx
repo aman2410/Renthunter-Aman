@@ -30,6 +30,7 @@ const rentdetails = ({ formData, handleChangeInput, handleNextStep, handlePrevSt
                         <div className={styles.cc4}>
                         <input
                         type="text"
+                        name='otherDetails4'
                         placeholder="Specify Other Details (If Any)"
                         />
                         

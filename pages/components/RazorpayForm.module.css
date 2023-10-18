@@ -1,0 +1,35 @@
+/* RazorpayForm.module.css */
+.razorpayForm {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .razorpayForm h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .razorpayForm h4 {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .razorpayForm button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .razorpayForm button:hover {
+    background-color: #0056b3;
+  }
+  
