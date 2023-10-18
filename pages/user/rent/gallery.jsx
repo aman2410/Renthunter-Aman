@@ -40,11 +40,11 @@ const Gallery = ({
       <div className={styles.maincontainer}>
         <div className={styles.cc1}>
           <div className={styles.cc2}>
-            <label htmlFor="uploadimages">Upload Images</label>
+            <label htmlFor="uploadimages">Upload Images Or Drag And Drop File</label>
             <input
               type="file"
               encType="multipart/form-data"
-              id="uploadimages"
+              id= {styles.upload_image}
 
               name="uploadedImages"
 
@@ -52,8 +52,9 @@ const Gallery = ({
               multiple
               onChange={handleFileUpload}
             />
-            <p>Click in the border to browse images</p>
-          </div>
+            </div>
+            {/* <p>Click in the border to browse images</p> */}
+         
           {previewImages.length > 0 && (
             <div className={styles.uploadedImages}>
               {previewImages.map((image, index) => (

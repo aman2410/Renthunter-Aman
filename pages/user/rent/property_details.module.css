@@ -1,0 +1,42 @@
+/* property_details.module.css */
+.cardContainer {
+  max-width: 700px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 20px;
+  background-color: #f8f8f8; /* Example background color */
+
+  /* Add additional styling as needed */
+}
+
+/* Style to make the text boxes smaller */
+.cardContainer input[type="text"] {
+  width: 100%; /* Full width input */
+  max-width: 300px; /* Set a maximum width to limit the size */
+}
+
+/* Add more styles here as needed to adjust other elements */
+
+/* Button styles */
+.button {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.previousbutton,
+.nextbutton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nextbutton {
+  background-color: #28a745;
+}
+
+/* Adjust styles as needed to fit your design */

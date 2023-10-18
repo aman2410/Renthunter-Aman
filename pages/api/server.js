@@ -22,7 +22,7 @@ app.use(express.static('public'));
 const db = createConnection({
   host: 'localhost',
   user: 'root',
-  password: '123456',
+  password: '8269282344#AAA',
   database: 'renthunter'
 });
 

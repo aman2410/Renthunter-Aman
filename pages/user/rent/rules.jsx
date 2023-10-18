@@ -31,7 +31,9 @@ const rentdetails = ({ formData, handleChangeInput, handleNextStep, handlePrevSt
                         <input
                         type="text"
                         placeholder="Specify Other Details (If Any)"
-                        /><h1>150 Character Remaining</h1>
+                        />
+                        
+                        {/* <h1>150 Character Remaining</h1> */}
         </div>          
                         </div>
                         </div>

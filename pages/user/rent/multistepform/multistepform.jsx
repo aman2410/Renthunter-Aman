@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PostHome from '../postprop';
+import PostHome from '../home';
 import AmenitiesDetails from '../amenities';
 import Pricing from '../pricing';
 import Gallery from '../gallery';
@@ -46,6 +46,7 @@ export const initialFormData = {
   areYou: '',
   availableToConnect: '',
 };
+
 
 const stepsArray = ['Home', 'Rent Details', 'Amenities', 'Pricing', 'Gallery', 'Rules', 'KYC', 'Payment'];
 
@@ -144,26 +145,26 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
       return null;
     }
     return (
-      <section className={styles.top}>
-        {stepsArray.map((item) => (
-          <div
-            key={item}
-            className={`w-8 h-8 flex justify-center items-center border-2 border-gray-600 rounded-full cursor-pointer ${
-              item === step ? 'bg-blue-500' : ''
-            }`}
-            onClick={() => setStep(item)}
-          >
-            {item}
-          </div>
-        ))}
-      </section>
+        <section className={styles.top}>
+    {stepsArray.map((item) => (
+      <div
+        key={item}
+        className={`step ${item === step ? 'active' : ''}`}
+        onClick={() => setStep(item)}
+      >
+        {item}
+      </div>
+    ))}
+  </section>
+
     );
   };
 
   return (
     <div className={styles.maincontainer}>
+      <div>  
       {renderTopStepNumbers()}
-
+      </div>
       <div className={styles.top}>
         <div>
           {step === 'Home' ? (

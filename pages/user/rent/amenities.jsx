@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-import styles from './amenities.module.css';
+import styles from './rentdetails.module.css';
 import Amenities from '@/pages/components/postproperties/amenities';
 import Services from '@/pages/components/postproperties/services';
 import { useRouter } from 'next/router';
@@ -139,7 +139,7 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
          <div className={styles.maincontainer}>
           <h1>Parking</h1>
           
-            <div className="radio-button">
+            <div className= {styles.radiobutton_1}>
               <label>
                 <input
                   type="radio"
@@ -179,6 +179,10 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
             <div className={styles.cc1}>
             <div className={styles.ic1}>
             <h1>Amenities</h1>
+
+
+            <div className= {styles.horizontal_view}>
+
             {nearbyData.map((item) => (
               
               <div key={item.id} className={styles.ic2}>
@@ -199,12 +203,16 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
                 </label>
               </div>
             ))}
+            </div>
           </div>
           <div className={styles.ic1}>
             <h1>Services</h1>
+
+            <div className= {styles.horizontal_view2  }>
+
             {servicedata.map((ser) => (
               
-              <div key={ser.id} className={ser.ic2}>
+              <div key={ser.id} className={styles.ic2}>
                 
                 <label>
                   <input
@@ -219,6 +227,8 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
                 </label>
               </div>
             ))}
+
+</div>
           </div>
             </div>
 
@@ -229,7 +239,7 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
                 value={otherDetails}
                 onChange={handleChangeInput}
               />
-              <h1>150 Character Remaining</h1>
+              {/* <h1>150 Character Remaining</h1> */}
             </div>
 
             <div className={styles.button}>

@@ -118,10 +118,14 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
     }
   };
   return (
-    <><div className={styles.cardContainer}>
-      <div></div>
-            <div>
-              <label htmlFor="nameOrNumber">Name or Number of House</label>
+    <>
+    <div className={styles.cardContainer}>
+      {/* <div className= {styles.seprate_box}> */}
+
+
+           <div className= {styles.first_container}>
+            <div className= {styles.container_1}> 
+              <label htmlFor="nameOrNumber" id = {styles.label_1}>Name or Number of House</label>
               <input
                 type="text"
                 name="nameOrNumber"
@@ -131,8 +135,8 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
               />
             </div>
 
-            <div>
-              <label htmlFor="street">Street</label>
+            <div  className= {styles.container_2} >
+              <label htmlFor="street"  id = {styles.label_2}  >Street</label>
               <input
                 type="text"
                 name="street"
@@ -142,8 +146,11 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
               />
             </div>
 
+            
+
             <div className={styles.ic1}>
-              <div>
+            <div className= {styles.container_1}>
+              
                 <label htmlFor="country">Country</label>
                 <input
                   type="text"
@@ -152,12 +159,20 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
                   onChange={(e) => handleChangeInput(e)}
                   required
                 />
+              
+
+              </div>
               </div>
 
-              <div>
-                <label htmlFor="selectState">Select State</label>
+              </div>
+
+              <div className= {styles.select_state}>
+
+              <div className= {styles.stateee}>
+
+                <label htmlFor="selectState" id = {styles.state}> Select State</label>
                 <select
-                  id="selectState"
+                  id= {styles.state_2}
                   name="selectState"
                   value={formData.selectedState}
                   onChange={handleStateChange}
@@ -170,12 +185,13 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
                     </option>
                   ))}
                 </select>
-              </div>
 
-              <div>
-                <label htmlFor="selectCity">Select City</label>
+                </div>
+
+              <div className= {styles.select_city}>
+                <label htmlFor="selectCity"  id = {styles.Cityyy} >Select City</label>
                 <select
-                  id="selectCity"
+                  id={styles.Cityyy_2}
                   name="selectCity"
                   value={selectedCity}
                   onChange={handleCityChange}
@@ -190,10 +206,10 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
                 </select>
               </div>
 
-              <div>
-                <label htmlFor="selectArea">Select Area</label>
+              <div className= {styles.select_Area}>
+                <label htmlFor="selectArea"   id = {styles.Areaa} >Select Area</label>
                 <select
-                  id="selectArea"
+                  id= {styles.Areaa_2} 
                   name="selectArea"
                   value={selectedArea}
                   onChange={handleAreaChange}
@@ -207,31 +223,41 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
                   ))}
                 </select>
               </div>
+            
+            
             </div>
 
+            
+
             <div className={styles.ic2}>
+             
+              <div className={styles.Box_of_landmark}>
+
               <label htmlFor="landmark">Land Mark</label>
               <input
                 type="text"
                 placeholder="Land Mark"
-                id="landmark"
+                id= {styles.land_mark}
                 name="landmark"
                 value={formData.landmark}
                 onChange={(e) => handleChangeInput(e)}
                 required
               />
-            </div>
+            </div> 
 
-            <div className={styles.selectcontainer}>
+            {/* </div> */}
+
+
+            {/* <div className={styles.selectcontainer}> */}
               <div className={styles.sc}>
-                <label htmlFor="ageOfProperty">Age of Property (In Years)</label>
+                <label htmlFor="ageOfProperty" id = {styles.Age_of_prop} >Age of Property (In Years)</label>
                 <select
-                  id="ageOfProperty"
+                  id = {styles.area_typeee}
                   name="ageOfProperty"
                   value={formData.ageOfProperty}
                   onChange={(e) => handleChangeInput(e)}
                 >
-                  <option value="">Select Area Type</option>
+                  <option value=""  >Select Area Type</option>
                   <option value="lessthan1year">Less than 1 year</option>
                 <option value="1 Year">1 Year</option>
                 <option value="3 Years">2 Years</option>
@@ -241,11 +267,16 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
                 </select>
               </div>
 
-              <div className={styles.ic1}>
+
+              </div>
+
+
+              <div className={styles.ic11}>
+                <h2 className={styles.h1}>Nearby</h2 >
             {nearbyData.map((item) => (
               <div key={item.id} className={styles.ic2}>
                 <label>
-                  <input
+                  <input 
                     type="checkbox"
                     id={item.id}
                     name='nearby'
@@ -258,8 +289,8 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
               </div>
             ))}
           </div>
-      </div>
-            </div>
+      {/* </div> */}
+            
           <div className={styles.button}>
             <button className={styles.previousbutton}
             onClick={handleNextStep}
@@ -274,7 +305,7 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
           </button>
           </div>
 
-
+          </div>
     </>
   );
 };

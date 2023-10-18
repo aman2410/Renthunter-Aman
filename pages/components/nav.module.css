@@ -109,7 +109,14 @@
   transition: all .3s ease-in-out;
 }
 
+.Navbar button{
+  background-color: white;
+  border: 0px;
+}
 
+
+
+/* Media Queries */
 
 @media (max-width:768px){
 

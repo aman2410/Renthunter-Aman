@@ -1,115 +1,45 @@
-.html,.body{
-    width: 100%;
-}
-
-
-.top{
-display: flex;
-width: fit-content;
-position: relative;
-width: 90%;
-}
-#next{
-    width: 90%;
-}
-.maincontainer{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 0px;
-    margin-left: 2.5%;    
-    padding: 20px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    height: fit-content;
-    min-width: none;
-    
-    
-}
-.cardContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 55px;
-    align-items: center;
-    height: fit-content;
-    width: 90%;
-    max-width: 1500px;
-    
-}
-
-.cardContainer input{
-    border: none; /* Remove the default border */
-    /* border-bottom: 1px solid #ccc; Add a bottom border for the line effect */
-    height: 40px;
-    width:500px;
-    margin-bottom: 20px;
-    
-  }
-  .cardContainer select{
-    border: none; /* Remove the default border */
-    border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
-    height: 20px;
-    width:180px;
-  }
-  .ic1 input{
-        border: none; /* Remove the default border */
-        border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
-        height: 35px;
-        width:250px;
-        
-      }
-      .ic1 select{
-        border: none; /* Remove the default border */
-        border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
-        
-        width:240px;
-        
-      }
-      .ic1 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-        width: max-content;
-        
-      }
-
-.ic1 label{
-  display: block;
-}
-.ic2{
-  display: block;
-  width: 100%;
-}
-.ic2 input{
-  display: block;
-  width: 100%;
-  height: 30px;
-}
-.selectcontainer{
+/* Add centering styles to maincontainer */
+.maincontainer {
   display: flex;
-  width: 100%;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px; /* Adjust margin to center it vertically */
+  width: 100%; /* Adjust width to take the full width of the viewport */
+ 
 }
-.selectcontainer label{
-  display: block;
-  width: 50%;
-  font-size: 12px;
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center the step numbers horizontally */
+  margin: 0;
+  width: 100%; /* Take full width */
+  
+
 }
-.selectcontainer input{
-  display: block;
-  width: 10px;
-    margin: 0;
+
+/* Add media query to adjust font size based on screen size */
+@media (max-width: 768px) {
+  .step {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
 }
-.sc{
-  width: 50%;
+
+/* Add centering styles for buttons */
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px; /* Adjust margin for button group */
 }
 
 .button{
   display: flex;
   gap: 10px;
+  justify-content: center;
+ 
   
 }
 
@@ -121,50 +51,294 @@ width: 90%;
   border: none;
 }
 .nextbutton{
-  background-color: orange;
+  background-color: orangered;
   padding: 10px;
   color: white;
   width: 150px;
   border: none;
 }
-.checkboxcontainer{
-  width:50%;
-  margin: 10px;
+
+
+
+
+
+
+
+
+.cardContainer{
+
+
+  width: 80%;
+  border: 5px;
 
 }
-.checkboxcontainer h1{
-  font-size: 12px;
+
+
+.container_1{
+  display: block;
+  padding: 2px;
+  width: 23%;
+}
+
+#label_1{
+
+  display: block;
+  width: fit-content;
+}
+
+
+.container_2{
+  display: block;
+  padding: 2px;
+  width: 23%;
+  transform: translateX(15px);
+
+}
+
+
+#label_2{
+
+  display: block;
+  width: fit-content;
+}
+
+
+.select_state{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.stateee{
+  padding: 2px;
+  width: 23%;
+}
+
+#state{
+  display: block;
+}
+
+/* .select_city{
+
+  display: flex;
+  width: fit-content;
+ margin-top: 20px;
+ margin-bottom: 20px;
+} */
+
+
+.cardContainer{
+  width: 90vw;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+ padding-top: 20px;
+}
+
+.cardContainer label{
+  display: inline-block;
+  /* margin-right: 10px; */
+width: fit-content;  
+}
+
+/* .seprate_box{
+  display: flex;
+} */
+
+
+
+.cardContainer input{
+  border: 0;
+  border-bottom:  1px solid #ccc ;
+  /* margin-right: 20px; */
+  width: 20vw;
+  margin-top: 6px;
+ 
+
+}
+
+
+
+.first_container{
+
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.ic1{
+  padding: 2px;
+  transform: translateX(30px);
   
 }
 
-.ic1 {
+
+/* .select_state{
+  
+  display: inline;
+  transform: translateY(-25px);
+} */
+
+#state_2{
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  width: 20vw;
+  
+
+}
+
+
+.select_city{
+  
+  padding: 2px;
+  
+}
+
+#Cityyy_2{
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  width: 21vw;
+
+}
+
+.select_Area{
+  padding: 2px;
+
+}
+
+
+#Areaa_2{
+
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  width: 21vw;
+}
+/* 
+.country{
+
+  width: 15vw;
+  display: inline;
+} */
+
+
+#state{
+
+  margin-bottom: 10px;
+  margin-left: 4px;
+}
+#Cityyy{
+
+  margin-bottom: 10px;
+  margin-left: 4px;
+  display: block;
+}
+#Areaa{
+
+  margin-bottom: 10px;
+  margin-left: 4px;
+  display: block;
+}
+
+
+/* option{
+  border: 0;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+} */
+
+
+.ic2{
+  padding: 10px;
+  display: flex;
+  margin-top: 10px;
+  
+}
+/* .ic2 label{
+  display: block;
+  
+} */
+
+
+
+.Box_of_landmark{
+  padding: 2px;
+  margin-right: 174px;
+}
+
+.Box_of_landmark label{
+
+  display: block ;
+  margin-bottom: 10px;
+}
+
+/* #land_mark{
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  width: 23%;
+
+} */
+
+.sc{
+  padding: 2px;
+}
+
+#Age_of_prop{
+
+  display: block;
+  margin-bottom: 10px;
+  width: max-content;
+  font-size: .9rem;
+  margin-left: 5px;
+}
+
+#area_typeee{
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  width: 21vw;
+  margin-top: 9px;
+
+}
+
+
+.selectcontainer{
+
+  padding: 10px;
+  display: flex;
+ 
+}
+
+.ic11{
+
+  width: 90%;
+  margin-left: 10px;
+  margin-top: -10px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  gap: 20%;
+  }
+
   
-  align-items: center;
-}
-.ic1 label{
-  margin-right: 10px;
-  display: flex;
-  width: fit-content;
-  font-size: 12px;
-}
-.ic1 input{
-  margin-right: 10px;
-  display: flex;
-  width: fit-content;
-  margin: 0;
-}
-.ic2{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 30%;
-  margin-bottom: 20px;
+
+
+.ic11 h5{
+
+  font-weight: 50;
+  color: rgb(91, 90, 90);
 }
 
 
+.h1{
 
-
-
+  display: block;
+  width: 100%;
+      }
+      .ic2 label{
+width: 20vw;
+      }
+  
+      .ic2 input{
+width: 5vw;
+      }

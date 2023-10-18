@@ -72,7 +72,7 @@ const Pricing = ({formData, handleChangeInput, handleNextStep,handlePrevStep, te
               <label htmlFor="maintenanceCharges">Maintenance charges</label>
               <input
                 type="text"
-                placeholder="Maintenance charges"
+                placeholder="In Months"
                 id="maintenanceCharges"
                 name="maintenanceCharges"
                 value={formData.maintenanceCharges}
@@ -84,7 +84,7 @@ const Pricing = ({formData, handleChangeInput, handleNextStep,handlePrevStep, te
               <label htmlFor="agreementDuration">Agreement Duration</label>
               <input
                 type="text"
-                placeholder="Agreement Duration"
+                placeholder="In Months"
                 id="agreementDuration"
                 name="agreementDuration"
                 value={formData.agreementDuration}
@@ -92,11 +92,11 @@ const Pricing = ({formData, handleChangeInput, handleNextStep,handlePrevStep, te
               />
             </div>
 
-            <div>
+            <div >
               <label htmlFor="intimationBeforeLeaving">Intimation Before Leaving</label>
               <input
                 type="text"
-                placeholder="Intimation Before Leaving"
+                placeholder="In Months"
                 id="intimationBeforeLeaving"
                 name="intimationBeforeLeaving"
                 value={formData.intimationBeforeLeaving}
@@ -112,7 +112,7 @@ const Pricing = ({formData, handleChangeInput, handleNextStep,handlePrevStep, te
               value={formData.otherDetails}
               onChange={(e) => handleChangeInput(e)}
             />
-            <h1>150 Character Remaining</h1>
+            {/* <h1>150 Character Remaining</h1> */}
           </div>
 
           <div className={styles.button}>
