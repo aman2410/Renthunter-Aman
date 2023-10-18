@@ -4,6 +4,8 @@ import bcrypt from 'bcrypt';
 import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
+import moment from 'moment';
+
 import { fileURLToPath } from 'url';
 const app = express();
 const port = process.env.PORT || 5000;
@@ -808,6 +810,8 @@ app.post('/api/storeFormDataWithImage', upload.single('uploadedImages'), (req, r
 ?,
 ?        
        )`;
+       const currentDate = moment().format('YYYY-MM-DD'); // Example format: '2023-10-15'
+const currentTime = moment().format('HH:mm:ss'); // Example format: '13:45:30'
 const values = [
     formData.nameOrNumber,
     formData.street,
@@ -851,19 +855,19 @@ const values = [
     formData.pinCode,
     formData.areYou,
     formData.availableToConnect,
+    formData.payment_types,
+    currentDate,
+    currentTime,
     null,
     null,
     null,
     null,
     null,
+    formData.doc_no,
     null,
     null,
     null,
-    null,
-    null,
-    null,
-    null,
-    null,
+    formData.paym,
     null      
 ];
 
@@ -915,6 +919,47 @@ LEFT JOIN
     } else {
       res.json(results);
     }
+  });
+});
+
+
+app.get('/api/paymentPlans', (req, res) => {
+  // Fetch the payment plan data from the database
+  // and send it as a JSON response
+  const query = 'SELECT * FROM payment_plan';
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Database query error:', err);
+      res.status(500).json({ error: 'Failed to fetch payment plans' });
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+
+import Razorpay from 'razorpay';
+// Initialize Razorpay with your API key and secret
+const razorpay = new Razorpay({
+  key_id: 'rzp_test_fOLi9gOIcgNeLQ',
+  key_secret: '6zkj8vsUWHSB0J1QrtClTk6K',
+});
+
+
+app.post('/createRazorpayOrder', async (req, res) => {
+  const { amount } = req.body; // Get the amount from the client
+
+  const orderOptions = {
+    amount: amount, // Amount in paise
+    currency: 'INR',
+  };
+
+  razorpay.orders.create(orderOptions, (err, order) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    return res.status(200).json(order);
   });
 });
 

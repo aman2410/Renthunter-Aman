@@ -9,6 +9,7 @@ import Payment from '../payment';
 import Rentdetails from '../rentdetails';
 import styles from './multi.module.css';
 import Router from 'next/router';
+import axios from 'axios';
 
 export const initialFormData = {
   nameOrNumber: '',
@@ -27,7 +28,10 @@ export const initialFormData = {
   availableFrom: '',
   furnishing: '',
   floor: '',
-  otherDetails: '',
+  otherDetails1: '',
+  otherDetails2: '',
+  otherDetails3: '',
+  otherDetails4: '',
   parkingOptions: '',
   uploadedImages: [], // Change to an array to store multiple image URLs
   rentAmount: '',
@@ -45,6 +49,12 @@ export const initialFormData = {
   pinCode: '',
   areYou: '',
   availableToConnect: '',
+  doc_no: '',
+  paym: '',
+  payment_types: ' ',
+
+  
+
 };
 
 const stepsArray = ['Home', 'Rent Details', 'Amenities', 'Pricing', 'Gallery', 'Rules', 'KYC', 'Payment'];
@@ -103,20 +113,26 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
   };
 
   async function handleSubmitFormData() {
+    console.log('handleSubmitFormData called');
     try {
       const formDataToSend = new FormData();
 
-      
-  
-      // Append form fields to the FormData object
-      for (const key in formData) {
-        formDataToSend.append(key, formData[key]);
-      }
-  
-      // Append uploaded images to the FormData object
-      for (let i = 0; i < formData.uploadedImages.length; i++) {
-        formDataToSend.append('uploadedImages', formData.uploadedImages[i]);
-      }
+// Append form fields to the FormData object
+for (const key in formData) {
+  if (key !== 'doc_no' && key !== 'paym' && key !== 'payment_types') {
+    formDataToSend.append(key, formData[key]);
+  }
+}
+
+// Append uploaded images to the FormData object
+for (let i = 0; i < formData.uploadedImages.length; i++) {
+  formDataToSend.append('uploadedImages', formData.uploadedImages[i]);
+}
+
+// Append the specific fields only once
+formDataToSend.append('doc_no', formData.doc_no);
+formDataToSend.append('paym', formData.paym);
+formDataToSend.append('payment_types', formData.payment_types);
   
       // Send the form data to your API
       const response = await fetch('http://localhost:5000/api/storeFormDataWithImage', {
@@ -231,9 +247,12 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
       ) : null}
       {step === 'Payment' ? (
         <Payment
-          handleChangeInput={handleChangeInput}
-          handlePrevStep={handlePrevStep}
-          handleSubmitFormData={handleSubmitFormData}
+        formData={formData}
+        setFormData={setFormData}
+        handleChangeInput={handleChangeInput}
+        handlePrevStep={handlePrevStep}
+        uploadedImages={formData.uploadedImages} // Pass uploadedImages separately if needed
+        handleSubmitFormData={handleSubmitFormData}
         />
       ) : null}
     </div>

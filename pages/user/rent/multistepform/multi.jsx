@@ -3,7 +3,9 @@ import React from 'react';
 import SimpleMultiStepForm from './multistepform';
 import Extranav from '@/pages/components/extranav';
 import Navbar from '@/pages/components/navbar';
-import styles from './../multistepform/multi.module.css'
+import styles from './../multistepform/multi.module.css';
+
+
 
 
 const page = () => {

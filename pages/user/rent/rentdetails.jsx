@@ -265,8 +265,8 @@ const Rentdetails = ({ formData, handleChangeInput, handleNextStep,handlePrevSte
             <input
               type="text"
               placeholder="Specify Other Details (If Any)"
-              id="otherDetails"
-              name="otherDetails"
+              id="otherDetails1"
+              name="otherDetails1"
               
               onChange={(e) => handleChangeInput(e)}
             />

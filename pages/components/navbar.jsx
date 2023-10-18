@@ -26,8 +26,9 @@ const Navbar = () => {
         <Link href="/user/myprofile"><li>My Profile</li></Link>
         <Link href="/user/postpropertymain"><li>Post Property</li></Link>
         
+        
+        <li><button onClick={() => scrollTo("contact_us")}>Contact Us</button></li>
         <li><button onClick={() => scrollTo("about-us")}>About Us</button></li>
-        <li><button onClick={() => scrollTo("contact-us")}>Contact Us</button></li>
         
         <Link href="/user/gallery"><li>Gallery</li></Link>
         {/* Add other menu items */}

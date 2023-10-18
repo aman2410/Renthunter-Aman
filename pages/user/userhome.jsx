@@ -23,12 +23,7 @@ const UserHome = () => {
     currentPage + buttonsPerPage
   );
 
-  const scrollTo = (elementId) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+
   
 
   return (
@@ -38,6 +33,7 @@ const UserHome = () => {
         <Navbar />
       </div>
       <div className={styles.mainfunc}>
+      <div className={styles.extracontainer}>
         <div className={styles.buttondata}>
           <button className={` ${styles.circularBtn}`} onClick={() => handleClick("left")}>
             {"<"}
@@ -58,9 +54,10 @@ const UserHome = () => {
               <LocationInput />
           </div>
         </div>
+        </div>
       </div>
       </div>
-      <div id="contact-us" className={styles.section}>
+      <div id="contact_us" className={styles.section}>
       <div className={styles.firsthead}>
                 <h1>Send You Message</h1>
             <div className={styles.input}>
