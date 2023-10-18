@@ -70,6 +70,13 @@ handleSubmitFormData();
               <div key={plan.id} className={styles.paymentPlan}>
                 <h2>{plan.pname}</h2>
                 <h3>Amount: {plan.cost} INR</h3>
+
+
+
+
+
+
+                
                 <button onClick={() => setSelectedPlan(plan)}>Select Plan</button>
               </div>
             ))}

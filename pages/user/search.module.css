@@ -1,14 +1,28 @@
+
+.maincontainer{
+  display: flex;
+  width: 100vw;
+  margin-top: 10% ;
+}
+
 .sidenavbar{
-    width: 20%;
+    width: fit-content;
     text-decoration: none;
     list-style: none;
-    box-shadow: 0px 5px 15px rgba(57, 55, 55, 0.2);;
+    
     margin: 10px;
-    margin-top: 100px;
+    padding: 10px;
+    
 
 }
 .main{
   display: flex;
+  /* margin-top: 10%; */
+  width: 20%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+
 }
 .container ul{
     
@@ -44,49 +58,95 @@ font-size: 15px;
     font-size: 12px;
 }
 
-.container h2{
+.container h3{
     font-size: 15px;
     
     }
 
  /* search.module.css */
 
-.sidenavbar {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-  }
-  
-  .container {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-right: 20px;
-    flex: 1;
-  }
   
   .propertyList {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 30px;
+    padding-top: 0;
+    flex-direction: column;
+    width: 75%;
   }
   
   .propertyRow {
     border: 1px solid #ccc;
-    padding: 20px;
-    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    padding: 0px;
+    width: 100%;/* Adjust the width as needed */
     box-sizing: border-box;
     background-color: #f7f7f7;
     transition: transform 0.2s ease-in-out;
   }
   
   .propertyRow:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
   
   /* Add more styles for your filter options and other elements as needed */
   
-  .propertyRow img {
-    max-width: 200px; /* Set the maximum width to 200px */
+.image {
+    width: 40% ; /* Set the maximum width to 200px */
     height: auto; /* Maintain the aspect ratio */
+    min-width: 200px;
+  }
+
+  .propertyRow img {
+    width: 100% ; /* Set the maximum width to 200px */
+    height: auto; /* Maintain the aspect ratio */
+    min-width: 200px;
+  }
+  .List{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+  }
+  .details{
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .details h3{
+margin: 0;
+width: 40%;
+height: fit-content;
+padding-left: 10px;
+  }
+  .avilabledetails{
+    display: flex;
+    width: 100%;
+    margin: 0;
+    justify-content: end;
+  }
+
+  .avilabledetails h3{
+    display: block;
+    background-color: green;
+    margin: 0;
+    right: 0;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+
+
+    
+  }
+  #h3{
+    display: block;
+    width: 100%;
+    color: orange;
+  }
+  #h2{
+    display: block;
+    padding-left: 10px;
+    font-weight: 800px;
+    
   }
