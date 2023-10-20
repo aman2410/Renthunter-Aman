@@ -177,11 +177,12 @@ formDataToSend.append('payment_types', formData.payment_types);
   };
 
   return (
-    <div className={styles.maincontainer}>
+    <div className={styles.maincontainers}>
       <div>  
       {renderTopStepNumbers()}
       </div>
       <div className={styles.top}>
+
         <div>
           {step === 'Home' ? (
             <PostHome formData={formData} handleChangeInput={handleChangeInput} handleNextStep={handleNextStep} />

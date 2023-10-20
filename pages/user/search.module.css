@@ -129,11 +129,11 @@ padding-left: 10px;
 
   .avilabledetails h3{
     display: block;
-    background-color: green;
+    /* background-color: green; */
     margin: 0;
     right: 0;
     position: relative;
-    width: fit-content;
+    width: 50%;
     height: fit-content;
 
 
@@ -149,4 +149,9 @@ padding-left: 10px;
     padding-left: 10px;
     font-weight: 800px;
     
+  }
+
+  .filtercontainer{
+    height: 200px;
+    overflow-x: scroll;
   }

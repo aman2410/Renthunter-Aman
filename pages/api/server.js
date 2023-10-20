@@ -899,19 +899,71 @@ res.status(500).json({ error: 'Internal server error' });
 });
 
 
-//  Define a route to fetch data from PostHome table
+// //  Define a route to fetch data from PostHome table
+// app.get('/api/propertyData', (req, res) => {
+//   const query = `
+// SELECT 
+//     p.id AS post_home_id, -- Alias the id from post_home
+//     f.id AS furnished_id, -- Alias the id from furnished_types
+//     p.*, 
+//     f.*
+// FROM 
+//     post_home p
+// LEFT JOIN 
+//     furnished_types f ON p.fur = f.id
+//   `;
+//   db.query(query, (err, results) => {
+//     if (err) {
+//       console.error('Database query error:', err);
+//       res.status(500).json({ error: 'Failed to fetch data' });
+//     } else {
+//       res.json(results);
+//     }
+//   });
+// });
+
 app.get('/api/propertyData', (req, res) => {
   const query = `
-SELECT 
-    p.id AS post_home_id, -- Alias the id from post_home
-    f.id AS furnished_id, -- Alias the id from furnished_types
-    p.*, 
-    f.*
-FROM 
-    post_home p
-LEFT JOIN 
-    furnished_types f ON p.fur = f.id
+    SELECT 
+        p.id AS post_home_id,
+        f.id AS furnished_id,
+        n1.id AS near_by_id,
+        n2.id AS tenant_type_id, 
+        n3.id AS bhk_id,  
+        n4.id AS amenities_id,  
+        n5.id AS floor_id,  
+        n6.id AS facings_id,  
+        n7.id AS services_id,
+        p.*, 
+        f.*,
+        n1.*, 
+        n2.*, 
+        n3.*, 
+        n4.*, 
+        n5.*, 
+        n6.*,
+        n7.*
+    FROM 
+        post_home p
+    LEFT JOIN 
+        furnished_types f ON p.fur = f.id
+    LEFT JOIN 
+        near_by n1 ON p.near_by = n1.id
+    LEFT JOIN 
+        tenant_types n2 ON p.tenant_type = n2.id
+    LEFT JOIN 
+        bhk_types n3 ON p.bhk = n3.id
+    LEFT JOIN 
+        amenities_type n4 ON p.fur = n4.id
+    LEFT JOIN 
+        floor_types n5 ON p.floor = n5.id
+        LEFT JOIN 
+        facing_types n6 ON p.floor = n6.id
+    LEFT JOIN 
+        service_type n7 ON p.services = n7.id;
+
   `;
+
   db.query(query, (err, results) => {
     if (err) {
       console.error('Database query error:', err);
@@ -921,6 +973,7 @@ LEFT JOIN
     }
   });
 });
+
 
 
 app.get('/api/paymentPlans', (req, res) => {

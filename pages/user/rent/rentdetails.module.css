@@ -131,7 +131,7 @@
     margin-left: 2.5%;
     background-color: #ffffff;
     padding-top: 10px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); */
     width: 90%;
     height: fit-content;
   }
@@ -230,8 +230,8 @@
     margin-right: 10px;
   }
 
-  /* .horizontal_view{
-    width: 350px;
+  .horizontal_view{
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     gap: 70px;
@@ -254,7 +254,11 @@
     flex-wrap: wrap;
   }
 
- */
+  .ic2 label{
+width: 20%;
+  }
+
+
 
 
 

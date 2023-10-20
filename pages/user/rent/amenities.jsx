@@ -205,6 +205,8 @@ const AmenitiesDetails = ({formData, handleChangeInput,amenities,services, handl
             ))}
             </div>
           </div>
+
+          
           <div className={styles.ic1}>
             <h1>Services</h1>
 

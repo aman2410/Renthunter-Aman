@@ -6,7 +6,7 @@
     margin-left: 2.5%;
     background-color: #ffffff;
     padding-top: 10px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); */
     width: 80%;
     height: fit-content;
 }
@@ -69,4 +69,25 @@
     color: white;
     width: 150px;
     border: none;
+  }
+
+  .paymentPlans{
+    width: 90%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+  }
+  .paymentPlan{
+    width: 30%;
+    border: 1px solid black;
+    padding: 0;
+    
+    
+  }
+  .paymentPlan h2{
+    background-color: orange;
+    margin: 0;
+    padding: 0px;
+    padding-bottom: 5px;
   }
