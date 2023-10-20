@@ -114,6 +114,7 @@
   justify-content: end;
 }
 
+<<<<<<< HEAD
 .avilabledetails h3 {
   display: block;
   background-color: green;
@@ -133,3 +134,53 @@
   padding-left: 10px;
   font-weight: 800px;
 }
+=======
+  }
+  .details{
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .details h3{
+margin: 0;
+width: 40%;
+height: fit-content;
+padding-left: 10px;
+  }
+  .avilabledetails{
+    display: flex;
+    width: 100%;
+    margin: 0;
+    justify-content: end;
+  }
+
+  .avilabledetails h3{
+    display: block;
+    /* background-color: green; */
+    margin: 0;
+    right: 0;
+    position: relative;
+    width: 50%;
+    height: fit-content;
+
+
+    
+  }
+  #h3{
+    display: block;
+    width: 100%;
+    color: orange;
+  }
+  #h2{
+    display: block;
+    padding-left: 10px;
+    font-weight: 800px;
+    
+  }
+
+  .filtercontainer{
+    height: 200px;
+    overflow-x: scroll;
+  }
+>>>>>>> 6a899cfd5050b391853f8debb91b1a9a3cd944a7

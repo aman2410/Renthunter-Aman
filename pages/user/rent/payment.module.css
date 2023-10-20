@@ -1,14 +1,14 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-left: 2.5%;
-  background-color: #ffffff;
-  padding-top: 10px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  height: fit-content;
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-left: 2.5%;
+    background-color: #ffffff;
+    padding-top: 10px;
+    /* box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); */
+    width: 80%;
+    height: fit-content;
 }
 .maincontainer h1 {
   font-size: 15px;
@@ -71,3 +71,45 @@
   cursor: pointer; /* Change the cursor to a pointer when hovered */
   transition: transform 0.3s; /* Add a smooth transition effect for the transformation */
 }
+.button{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .previousbutton{
+    background-color: orange;
+    padding: 10px;
+    color: white;
+    width: 150px;
+    border: none;
+  }
+  .nextbutton{
+    background-color: orangered;
+    padding: 10px;
+    color: white;
+    width: 150px;
+    border: none;
+  }
+
+  .paymentPlans{
+    width: 90%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+  }
+  .paymentPlan{
+    width: 30%;
+    border: 1px solid black;
+    padding: 0;
+    
+    
+  }
+  .paymentPlan h2{
+    background-color: orange;
+    margin: 0;
+    padding: 0px;
+    padding-bottom: 5px;
+  }

@@ -5,7 +5,9 @@
   align-items: center;
   gap: 20px;
   margin-top: 40px; /* Adjust margin to center it vertically */
-  width: 100%; /* Adjust width to take the full width of the viewport */
+  width: 95%; /* Adjust width to take the full width of the viewport */
+  box-shadow: 1px 4px 16px #000;
+
  
 }
 

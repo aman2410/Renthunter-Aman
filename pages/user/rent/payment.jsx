@@ -67,17 +67,29 @@ const Payment = ({
     <>
       <div>{/* Additional content can be added here */}</div>
       <div className={styles.container}>
+
         <div className={styles.maincontainer}>
-          <h1>Select a Payment Plan</h1>
+
           <div className={styles.paymentPlans}>
             {paymentPlans.map((plan) => (
               <div key={plan.id} className={styles.paymentPlan}>
                 <h2>{plan.pname}</h2>
-                <h3>Amount: {plan.cost} INR</h3>
+                <h3>Amount: {plan.cost}</h3>
+                <h3>Months: {plan.mon}</h3>
+                <h3>{plan.fea1}</h3>
+                <h3>{plan.fea2}</h3>
+                <h3>{plan.fea3}</h3>
+                <h3>{plan.fea4}</h3>
+                <h3>{plan.fea5}</h3>
+                <h3>{plan.fea6}</h3>
+                <h3>{plan.fea7}</h3>
+                <h3>{plan.fea8}</h3>
 
                 <button onClick={() => setSelectedPlan(plan)}>
                   Select Plan
                 </button>
+
+                <button onClick={() => setSelectedPlan(plan)}>Select Plan</button>
               </div>
             ))}
           </div>

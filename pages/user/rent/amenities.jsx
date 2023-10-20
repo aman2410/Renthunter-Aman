@@ -191,32 +191,33 @@ const AmenitiesDetails = ({
             <div className={styles.ic1}>
               <h1>Amenities</h1>
 
-              <div className={styles.horizontal_view}>
-                {nearbyData.map((item) => (
-                  <div key={item.id} className={styles.ic2}>
-                    <label>
-                      <input
-                        type="checkbox"
-                        id={item.id}
-                        name="amenities"
-                        value={item.id}
-                        checked={
-                          selectedAmenities.includes(item.id) ||
-                          (amenities?.includes(item.id) ?? false)
-                        }
-                        onChange={(e) => {
-                          handleChangeInput(e);
-                          handleCheckboxChange(e);
-                        }}
-                      />
-                      {item.atype}
-                    </label>
-                  </div>
-                ))}
+
+            <div className= {styles.horizontal_view}>
+
+            {nearbyData.map((item) => (
+              
+              <div key={item.id} className={styles.ic2}>
+                
+                <label>
+                  <input
+                    type="checkbox"
+                    id={item.id}
+                    name='amenities'
+                    value={item.id}
+                    checked={selectedAmenities.includes(item.id) || (amenities?.includes(item.id) ?? false)}
+                    onChange={(e) => {
+                      handleChangeInput(e);
+                      handleCheckboxChange(e);
+                    }}
+                  />
+                  {item.atype}
+                </label>
               </div>
+            ))}
             </div>
-            <div className={styles.ic1}>
-              <h1>Services</h1>
+          </div>
+          <div className={styles.ic1}>
+            <h1>Services</h1>
 
               <div className={styles.horizontal_view2}>
                 {servicedata.map((ser) => (
