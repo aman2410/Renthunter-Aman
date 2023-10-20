@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./multistepform/multi.module.css";
 import axios from "axios";
 
-const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
+const PostHome = ({ formData, handleChangeInput, handleNextStep, handlePrevStep, nearby }) => {
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
   const [selectedState, setSelectedState] = useState('');
@@ -293,7 +293,7 @@ const PostHome = ({ formData, handleChangeInput, handleNextStep, nearby }) => {
             
           <div className={styles.button}>
             <button className={styles.previousbutton}
-            onClick={handleNextStep}
+            onClick={handlePrevStep}
             >
             Previous
           </button>

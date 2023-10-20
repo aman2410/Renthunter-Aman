@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import PostHome from '../home';
 import AmenitiesDetails from '../amenities';
 import Pricing from '../pricing';
-import Gallery from '../gallery';
 import Rules from '../rules';
 import KYC from '../kyc';
 import Payment from '../payment';
 import Rentdetails from '../rentdetails';
 import styles from './multi.module.css';
 import Router from 'next/router';
-import axios from 'axios';
+import UploadImages from '../upload_images';
 
 export const initialFormData = {
   nameOrNumber: '',
@@ -58,33 +57,31 @@ export const initialFormData = {
 };
 
 
-const stepsArray = ['Home', 'Rent Details', 'Amenities', 'Pricing', 'Gallery', 'Rules', 'KYC', 'Payment'];
+const stepsArray = ['Home', 'Rent Details', 'Amenities', 'Pricing', 'Upload Images', 'Rules', 'KYC', 'Payment'];
 
 const SimpleMultiStepForm = ({ showStepNumber }) => {
   const [step, setStep] = useState('Home');
   const [formData, setFormData] = useState(initialFormData);
 
   const handleNextStep = async () => {
-   
-
-    if (step === 'Gallery') {
+    if (step === 'Upload Images') {
       setStep('Rules');
     } else {
       if (step === 'Home') setStep('Rent Details');
       else if (step === 'Rent Details') setStep('Amenities');
       else if (step === 'Amenities') setStep('Pricing');
-      else if (step === 'Pricing') setStep('Gallery');
-      else if (step === 'Gallery') setStep('Rules');
+      else if (step === 'Pricing') setStep('Upload Images');
+      else if (step === 'Upload Images') setStep('Rules');
       else if (step === 'Rules') setStep('KYC');
       else if (step === 'KYC') setStep('Payment');
     }
   };
 
   const handlePrevStep = () => {
-    if (step === 'Rules') setStep('Payment');
+    if (step === 'Payment') setStep('KYC');
     else if (step === 'KYC') setStep('Rules');
-    else if (step === 'Rules') setStep('Gallery');
-    else if (step === 'Gallery') setStep('Pricing');
+    else if (step === 'Rules') setStep('Upload Images');
+    else if (step === 'Upload Images') setStep('Pricing');
     else if (step === 'Pricing') setStep('Amenities');
     else if (step === 'Amenities') setStep('Rent Details');
     else if (step === 'Rent Details') setStep('Home');
@@ -219,8 +216,8 @@ formDataToSend.append('payment_types', formData.payment_types);
         />
       ) : null}
 
-      {step === 'Gallery' ? (
-        <Gallery
+      {step === 'Upload Images' ? (
+        <UploadImages
           formData={formData}
           handleChangeInput={handleChangeInput}
           handlePrevStep={handlePrevStep}

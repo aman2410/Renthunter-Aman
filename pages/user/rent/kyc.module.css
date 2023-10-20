@@ -1,125 +1,169 @@
-.container{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-left: 2.5%;
-    background-color: #ffffff;
-    padding-top: 10px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    height: fit-content;
-}
-.maincontainer h1{
-    font-size: 15px;
-    display: flex;
-    margin: 0;
-    
-    z-index:1;
-    
-}
-.maincontainer{
-    display:flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-    width: 90%;
-}
-.cc2{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.cc2 label{
-    display: block;
-    margin-bottom: 0;
-    height: 20px;
-}
-.cc2 input{
-    width:18vw;
-    min-width: 150px;
-    height: 30px;
-    border: none; /* Remove the default border */
-    border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
-}
-.cc2 input::placeholder
-{   
-    font-size: 15px;
-}
-.cc2 select{
-    width:18vw;
-    min-width: 150px;
-    height: 30px;
-    margin: 0;
-    border: none; /* Remove the default border */
-    border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
-    margin-top: 3px;
-}
-.cc3{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding-top: 10px;
-}
-.cc3 label{
-    display: block;
-    margin-bottom: 13px;
-}
-.cc3 input{
-    width:18vw;
-    min-width: 150px;
-    height: 30px;
-    border: none; /* Remove the default border */
-  border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
-}
-.cc3 input::placeholder{
-    
-    font-size: 15px;
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-left: 2.5%;
+  background-color: #ffffff;
+  padding-top: 10px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  height: fit-content;
 }
-.cc3 select{
-    width:18vw;
-    min-width: 150px;
-    height: 30px;
-    margin: 0;
-    border: none; /* Remove the default border */
-    border-bottom: 1px solid #ccc; /* Add a bottom border for the line effect */
-    margin-top: 3px;
+.maincontainer h1 {
+  font-size: 15px;
+  display: flex;
+  margin: 0;
+
+  z-index: 1;
+}
+.maincontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  width: 90%;
+}
+.cc2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.cc2 label {
+  display: block;
+  margin-bottom: 0;
+  height: 20px;
+}
+.cc2 input {
+  width: 18vw;
+  min-width: 150px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.cc2 input::placeholder {
+  font-size: 15px;
+}
+.cc2 select {
+  width: 18vw;
+  min-width: 150px;
+  height: 30px;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 3px;
+}
+.cc3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 10px;
+}
+.cc3 label {
+  display: block;
+  margin-bottom: 13px;
+}
+.cc3 input {
+  width: 18vw;
+  min-width: 150px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.cc3 input::placeholder {
+  font-size: 15px;
+}
+.cc3 select {
+  width: 18vw;
+  min-width: 150px;
+  height: 30px;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 3px;
 }
 
-.cc4 input{
-    display: flex;
-    width: 95%;
-    height: 100px;
+.cc4 input {
+  display: flex;
+  width: 95%;
+  height: 100px;
 }
-.button{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-   
-    
-  }
+.button {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* .previousbutton {
+  background-color: orange;
+  padding: 10px;
+  color: white;
+  width: 150px;
+  border: none;
+}
+
+.previousbutton a {
+  text-decoration: none;
+  color: white;
+}
+
+.nextbutton {
+  background-color: orangered;
+  padding: 10px;
+  color: white;
+  width: 150px;
+  border: none;
+} */
+
+/* Following code is for Error or Success message */
+/* .success-msg, */
+.error-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+/* .success-msg {
+  color: #270;
+  background-color: #dff2bf;
+  width: 220px
   
-  .previousbutton{
-    background-color: orange;
-    padding: 10px;
-    color: white;
-    width: 150px;
-    border: none;
-   
-  }
+} */
 
-  .previousbutton a{
+.error-msg {
+  color: #d8000c;
+  background-color: #ffbaba;
+  width: 220px;
+}
 
-    text-decoration: none;
-    color: white;
-  }
+/* .success-msg, */
+.error-msg {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  margin: 25px;
+}
 
-  
-  .nextbutton{
-    background-color: orangered;
-    padding: 10px;
-    color: white;
-    width: 150px;
-    border: none;
-  }
+.previousbutton{
+  background-color: #fdce33;
+  padding: 10px;
+  color: rgba(255,251,241,255);
+  width: 150px;
+  border: none;
+}
+.nextbutton{
+  background-color: #fe871d;
+  padding: 10px;
+  color: rgba(254,244,231,255);
+  width: 150px;
+  border: none;
+}
+
+.previousbutton:hover,
+.nextbutton:hover {
+  transform: scale(1.05); /* Add a slight scale transformation when hovered */
+  cursor: pointer; /* Change the cursor to a pointer when hovered */
+  transition: transform 0.3s; /* Add a smooth transition effect for the transformation */
+}

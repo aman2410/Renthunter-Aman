@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styles from './pricing.module.css'
-import { useRouter } from 'next/router';
+import styles from "./pricing.module.css";
 
-
-
-const Pricing = ({formData, handleChangeInput, handleNextStep,handlePrevStep, tenantPreference}) => {
-
+const Pricing = ({ formData, handleChangeInput, handleNextStep, handlePrevStep, tenantPreference }) => {
   return (
     <>
-
       <div className={styles.container}>
-
         <div className={styles.maincontainer}>
           <div className={styles.cc1}>
             <div>
@@ -22,7 +16,6 @@ const Pricing = ({formData, handleChangeInput, handleNextStep,handlePrevStep, te
                 name="rentAmount"
                 value={formData.rentAmount}
                 onChange={(e) => handleChangeInput(e)}
-                
               />
             </div>
 
@@ -35,35 +28,20 @@ const Pricing = ({formData, handleChangeInput, handleNextStep,handlePrevStep, te
                 name="deposit"
                 value={formData.deposit}
                 onChange={(e) => handleChangeInput(e)}
-                
               />
             </div>
 
-            <div className={styles.cc2}>
-              <h1>Negotiable</h1>
-              <div className={styles.radiobutton}>
-                <label>
-                  <input
-                    type="radio"
-                    name="isNegotiable"
-                    value="Yes"
-                    checked={formData.isNegotiable === "Yes"}
-                    onChange={(e) => handleChangeInput(e)}
-                  />
-                  Yes
-                </label>
-
-                <label>
-                  <input
-                    type="radio"
-                    name="isNegotiable"
-                    value="No"
-                    checked={formData.isNegotiable === "No"}
-                    onChange={(e) => handleChangeInput(e)}
-                  />
-                  No
-                </label>
-              </div>
+            <div>
+              <label htmlFor="negotiable">Negotiable</label>
+              <select
+                id="negotiable"
+                name="isNegotiable"
+                value={formData.isNegotiable}
+                onChange={(e) => handleChangeInput(e)}
+              >
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
             </div>
           </div>
 
@@ -92,7 +70,7 @@ const Pricing = ({formData, handleChangeInput, handleNextStep,handlePrevStep, te
               />
             </div>
 
-            <div >
+            <div>
               <label htmlFor="intimationBeforeLeaving">Intimation Before Leaving</label>
               <input
                 type="text"
@@ -117,16 +95,13 @@ const Pricing = ({formData, handleChangeInput, handleNextStep,handlePrevStep, te
           </div>
 
           <div className={styles.button}>
-            <button className={styles.previousbutton}>
-              Previous
+            <button className={styles.previousbutton} onClick={handlePrevStep}>
+              Previous            
             </button>
-            <button 
-            type="button" 
-            className={styles.nextbutton} 
-            onClick={handleNextStep}
-          >
-            Next
-          </button>
+
+            <button type="button" className={styles.nextbutton} onClick={handleNextStep}>
+              Next
+            </button>
           </div>
         </div>
       </div>

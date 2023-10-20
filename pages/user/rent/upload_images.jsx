@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import styles from './gallery.module.css';
+import styles from './upload_images.module.css';
 
-const Gallery = ({
+const UploadImages = ({
   handleNextStep,
   handlePrevStep,
-  uploadedImages, // Add uploadedImages prop
+  uploadedImages,
   setFormData,
   formData,
 }) => {
@@ -68,6 +68,7 @@ const Gallery = ({
         <button className={styles.previousbutton} onClick={handlePrevStep}>
           Previous
         </button>
+        
         <button className={styles.nextbutton} onClick={handleNextStep}>
           Next
         </button>
@@ -76,4 +77,4 @@ const Gallery = ({
   );
 };
 
-export default Gallery;
+export default UploadImages;

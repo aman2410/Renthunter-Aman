@@ -58,16 +58,23 @@
   }
   
   .previousbutton{
-    background-color: orange;
+    background-color: #fdce33;
     padding: 10px;
-    color: white;
+    color: rgba(255,251,241,255);
     width: 150px;
     border: none;
   }
   .nextbutton{
-    background-color: orangered;
+    background-color: #fe871d;
     padding: 10px;
-    color: white;
+    color: rgba(254,244,231,255);
     width: 150px;
     border: none;
+  }
+  
+  .previousbutton:hover,
+  .nextbutton:hover {
+    transform: scale(1.05); /* Add a slight scale transformation when hovered */
+    cursor: pointer; /* Change the cursor to a pointer when hovered */
+    transition: transform 0.3s; /* Add a smooth transition effect for the transformation */
   }

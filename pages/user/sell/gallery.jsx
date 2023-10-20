@@ -46,11 +46,7 @@ const Gallery = ({
               type="file"
               encType="multipart/form-data"
               id="uploadimages"
-<<<<<<< HEAD
-              name="file"
-=======
               name="uploadedImages"
->>>>>>> origin/main
               accept="image/*"
               multiple
               onChange={handleFileUpload}

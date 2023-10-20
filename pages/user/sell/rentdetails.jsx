@@ -277,7 +277,7 @@ const Rentdetails = ({ formData, handleChangeInput, handleNextStep,handlePrevSte
           <button className={styles.previousbutton}
           onClick={handlePrevStep}
           >
-            Prev
+            Previous
           </button>
           <button
             type="button"

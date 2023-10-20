@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PostHome from '../postprop';
+import PostHome from '../Home';
 import AmenitiesDetails from '../amenities';
 import Pricing from '../pricing';
 import Gallery from '../gallery';

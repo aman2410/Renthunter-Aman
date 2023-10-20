@@ -25,18 +25,26 @@
   padding: 20px;
 }
 
-.previousbutton,
-.nextbutton {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+.previousbutton{
+  background-color: #fdce33;
+  padding: 10px;
+  color: rgba(255,251,241,255);
+  width: 150px;
   border: none;
-  cursor: pointer;
-  border-radius: 5px;
+}
+.nextbutton{
+  background-color: #fe871d;
+  padding: 10px;
+  color: rgba(254,244,231,255);
+  width: 150px;
+  border: none;
 }
 
-.nextbutton {
-  background-color: #28a745;
+.previousbutton:hover,
+.nextbutton:hover {
+  transform: scale(1.05); /* Add a slight scale transformation when hovered */
+  cursor: pointer; /* Change the cursor to a pointer when hovered */
+  transition: transform 0.3s; /* Add a smooth transition effect for the transformation */
 }
 
 /* Adjust styles as needed to fit your design */
